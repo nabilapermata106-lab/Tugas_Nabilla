@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LKPD JavaScript</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 850px;
+    line-height: 1.5;
+}
+h1, h2 { text-align: center; }
+h1 { font-size: 22px; }
+h2 { font-size: 18px; }
+h3 { font-size: 16px; }
+hr { border: 1px solid black; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+pre {
+    background: #f2f2f2;
+    border: 1px solid #999;
+    padding: 12px;
+    white-space: pre-wrap;
+}
+button {
+    padding: 8px 14px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+.jawaban { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<h2>LEMBAR KERJA PESERTA DIDIK (LKPD)</h2>
+<h1>SMKN 1 GARUT</h1>
+<h3 style="text-align:center">
+Dasar-Dasar Pengembangan Perangkat Lunak dan Gim
+</h3>
+<hr>
+
+<p><b>Materi:</b> JavaScript — String, Number, dan Konversi Data</p>
+<p><b>Kelas/Fase:</b> X / Fase E</p>
+<p><b>Alokasi waktu:</b> 2 × 45 menit</p>
+
+<p><b>Nama:</b> Nabilla Permata Ababil</p>
+<p><b>Kelas:</b> X PPLG 1</p>
+<p><b>No. Absen:</b> 20</p>
+
+<hr>
+
+<h3>A. Tujuan Pembelajaran</h3>
+<ol>
+<li>Membedakan tipe data String dan Number.</li>
+<li>Menjelaskan bahwa prompt() menghasilkan String.</li>
+<li>Menggunakan Number() dan String().</li>
+<li>Menganalisis kesalahan tipe data.</li>
+<li>Membuat program input dan perhitungan sederhana.</li>
+</ol>
+
+<h3>C. Aktivitas 1 — Prediksi</h3>
+<pre>let a = "10";
+let b = "20";
+console.log(a + b);</pre>
+
+<p><b>1. Apa hasil output program tersebut?</b></p>
+<p class="jawaban">Jawaban: 1020</p>
+
+<p><b>2. Mengapa hasilnya seperti itu?</b></p>
+<p class="jawaban">Jawaban: Karena a dan b bertipe String, operator + menggabungkan teks.</p>
+
+<p><b>3. Apakah a dan b bertipe Number?</b></p>
+<p class="jawaban">Jawaban: Tidak, keduanya bertipe String.</p>
+
+<p><b>4. Apakah prediksi sesuai dengan hasil program?</b></p>
+<p class="jawaban">Jawaban: Ya, hasilnya sesuai dengan prediksi.</p>
+
+<h3>D. Aktivitas 2 — Mengenali Tipe Data</h3>
+<pre>let nama = "Asep";
+let umur = 16;
+console.log(typeof nama);
+console.log(typeof umur);</pre>
+
+<table>
+<tr><th>Variabel</th><th>Prediksi</th><th>Hasil typeof</th><th>Kesimpulan</th></tr>
+<tr><td>nama</td><td>String</td><td>string</td><td>Teks</td></tr>
+<tr><td>umur</td><td>Number</td><td>number</td><td>Angka</td></tr>
+</table>
+
+<p><b>Apa perbedaan String dan Number?</b></p>
+<p class="jawaban">Jawaban: String digunakan untuk teks, sedangkan Number digunakan untuk nilai angka yang dapat dihitung.</p>
+
+<h3>E. Aktivitas 3 — Mengubah String Menjadi Number</h3>
+<pre>let a = "10";
+let b = "20";
+let hasil = Number(a) + Number(b);
+console.log(hasil);</pre>
+
+<p><b>Lengkapi bagian yang kosong.</b></p>
+<p class="jawaban">Jawaban: Number(a) + Number(b)</p>
+<p><b>Hasil output:</b> 30</p>
+
+<h3>F. Aktivitas 4 — Program Kasir Sederhana</h3>
+<pre>let harga = Number(prompt("Masukkan harga: "));
+let jumlah = Number(prompt("Masukkan jumlah: "));
+let total = harga * jumlah;
+console.log("Total belanja = " + total);</pre>
+
+<p><b>1. Mengapa menggunakan Number()?</b></p>
+<p class="jawaban">Jawaban: Agar input dari prompt() diubah menjadi angka sehingga dapat dihitung.</p>
+
+<p><b>2. Jika harga 10000 dan jumlah 3, berapa totalnya?</b></p>
+<p class="jawaban">Jawaban: 30000</p>
+
+<h3>G. Tantangan — Menghitung Nilai Rata-Rata</h3>
+<pre>let tugas = Number(prompt("Masukkan nilai tugas: "));
+let UTS = Number(prompt("Masukkan nilai UTS: "));
+let UAS = Number(prompt("Masukkan nilai UAS: "));
+
+let rataRata = (tugas + UTS + UAS) / 3;
+
+console.log("Nilai rata-rata = " + rataRata);</pre>
+
+<p><b>Langkah algoritma:</b></p>
+<ol>
+<li>Memasukkan nilai tugas.</li>
+<li>Memasukkan nilai UTS.</li>
+<li>Memasukkan nilai UAS.</li>
+<li>Menghitung jumlah nilai, lalu membaginya dengan tiga.</li>
+</ol>
+
+<h3>H. Think-Pair-Share</h3>
+<p><b>1. Mengapa prompt() perlu dikonversi untuk perhitungan?</b></p>
+<p class="jawaban">Jawaban: Karena prompt() menghasilkan String.</p>
+
+<p><b>2. Apa perbedaan "10" dan 10?</b></p>
+<p class="jawaban">Jawaban: "10" adalah String, sedangkan 10 adalah Number.</p>
+
+<p><b>3. Apa yang terjadi jika lupa menggunakan Number()?</b></p>
+<p class="jawaban">Jawaban: Perhitungan dapat menghasilkan penggabungan teks, bukan penjumlahan angka.</p>
+
+<p><b>4. Hasil diskusi dengan teman:</b></p>
+<p class="jawaban">Jawaban: Number() mengubah input teks menjadi angka agar dapat digunakan dalam perhitungan.</p>
+
+<h3>I. Refleksi 3-2-1</h3>
+<p><b>3 hal yang dipelajari:</b></p>
+<ol>
+<li>Perbedaan String dan Number.</li>
+<li>Fungsi prompt().</li>
+<li>Penggunaan Number() untuk perhitungan.</li>
+</ol>
+
+<p><b>2 hal yang masih membingungkan:</b></p>
+<ol>
+<li>Perbedaan konversi String dan Number.</li>
+<li>Kesalahan tipe data dalam program.</li>
+</ol>
+
+<p><b>1 hal yang ingin dicoba:</b></p>
+<p class="jawaban">Membuat program kasir sederhana menggunakan JavaScript.</p>
+
+<h3>J. Penilaian Diri</h3>
+<table>
+<tr><th>Pernyataan</th><th>Jawaban</th></tr>
+<tr><td>Dapat membedakan String dan Number</td><td>Ya</td></tr>
+<tr><td>Memahami prompt() menghasilkan String</td><td>Ya</td></tr>
+<tr><td>Dapat menggunakan Number()</td><td>Ya</td></tr>
+<tr><td>Dapat menggunakan String()</td><td>Ya</td></tr>
+<tr><td>Dapat menemukan kesalahan tipe data</td><td>Ya</td></tr>
+<tr><td>Dapat membuat program perhitungan sederhana</td><td>Ya</td></tr>
+</table>
+
+<h3>K. Bukti Hasil Program</h3>
+<p>Jalankan program berikut untuk melihat hasil di area output dan Console.</p>
+
+<button onclick="jalankanProgram()">Jalankan Program</button>
+<pre id="hasil">Hasil program akan muncul di sini.</pre>
+
+<script>
+function jalankanProgram() {
+    let a = "10";
+    let b = "20";
+    let hasil1 = a + b;
+    console.log("Aktivitas 1:", hasil1);
+
+    let nama = "Asep";
+    let umur = 16;
+    console.log("Aktivitas 2:", typeof nama);
+    console.log("Aktivitas 2:", typeof umur);
+
+    let hasil2 = Number(a) + Number(b);
+    console.log("Aktivitas 3:", hasil2);
+
+    let harga = 10000;
+    let jumlah = 3;
+    let total = harga * jumlah;
+    console.log("Aktivitas 4: Total belanja =", total);
+
+    document.getElementById("hasil").textContent =
+        "Aktivitas 1: " + hasil1 +
+        "\nAktivitas 2: string, number" +
+        "\nAktivitas 3: " + hasil2 +
+        "\nAktivitas 4: Total belanja = " + total;
+}
+</script>
+
+</body>
+</html>
